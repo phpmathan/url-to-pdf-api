@@ -29,6 +29,7 @@ const sharedQuerySchema = Joi.object({
     Joi.string().min(1).max(2000),
   ]),
   cookies: Joi.array().items(cookieSchema),
+  'x-api-key': Joi.string(),
   'viewport.width': Joi.number().min(1).max(30000),
   'viewport.height': Joi.number().min(1).max(30000),
   'viewport.deviceScaleFactor': Joi.number().min(0).max(100),
